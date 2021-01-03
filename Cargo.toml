@@ -1,0 +1,26 @@
+[package]
+name = "tcp-over-quic"
+version = "0.1.0"
+description = "implements Draft RFC 'Tunneling TCP inside QUIC'"
+keywords = ["quic","tcp"]
+edition = "2018"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
+
+[[bin]]
+name = "concentrator"
+path = "src/bin/concentrator.rs"
+
+
+[dependencies]
+clap = "2.33.3"
+anyhow = "1.0.33"
+tokio = { version = "0.2", features = ["full"] }
+tracing = "0.1.13"
+tracing-futures = { version = "0.2.3" }
+tracing-subscriber = "0.2.2"
+quinn = "0.6.1"
+rcgen = "0.8.5"
+futures = "0.3.7"
